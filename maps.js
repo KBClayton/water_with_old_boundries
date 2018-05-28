@@ -305,11 +305,57 @@ $(document).ready(function() {
                 });
                 loc_23_marker.setMap(map); 
 
+                var loc_24_raw=geolib.computeDestinationPoint(loc_23, 660.5016, 270);
+                var loc_24={lat:loc_24_raw.latitude, lng:loc_24_raw.longitude};
+                var loc_24_marker = new google.maps.Marker({
+                    position: loc_24,
+                    title: "With Gilbert's south line West 2167 feet to east line of Levi Currant Survey"
+                });
+                loc_24_marker.setMap(map); 
+                
+                var loc_25_raw=geolib.computeDestinationPoint(loc_24, 374.2944, 191);
+                var loc_25={lat:loc_25_raw.latitude, lng:loc_25_raw.longitude};
+                var loc_25_marker = new google.maps.Marker({
+                    position: loc_25,
+                    title: "S 11 W with said East line 1228 feet to SE corner of said survey"
+                });
+                loc_25_marker.setMap(map); 
+
+                var loc_26_raw=geolib.computeDestinationPoint(loc_25, 813.5112, 281);
+                var loc_26={lat:loc_26_raw.latitude, lng:loc_26_raw.longitude};
+                var loc_26_marker = new google.maps.Marker({
+                    position: loc_26,
+                    title: "N 79 W with South line of same crossing T&P RR 2669 feet to SW corner of Levi Currant survey"
+                });
+                loc_26_marker.setMap(map); 
+
+                var loc_27_raw=geolib.computeDestinationPoint(loc_26, 105.766, 279.5);
+                var loc_27={lat:loc_27_raw.latitude, lng:loc_27_raw.longitude};
+                var loc_27_marker = new google.maps.Marker({
+                    position: loc_27,
+                    title: "N 80 1/2 W with continuing with Gilbert's south line 347 feet to an all corner of his land"
+                });
+                loc_27_marker.setMap(map); 
+
+                var loc_28_raw=geolib.computeDestinationPoint(loc_27, 432.5112, 206.75);
+                var loc_28={lat:loc_28_raw.latitude, lng:loc_28_raw.longitude};
+                var loc_28_marker = new google.maps.Marker({
+                    position: loc_28,
+                    title: "S 26 3/4 W with his line 1419 feet"
+                });
+                loc_28_marker.setMap(map); 
+
+                var loc_28_raw=geolib.computeDestinationPoint(loc_27, 1992.173, 268.75);
+                var loc_28={lat:loc_28_raw.latitude, lng:loc_28_raw.longitude};
+                var loc_28_marker = new google.maps.Marker({
+                    position: loc_28,
+                    title: "With Gilbert's south line S 88 3/4 W 6536 feet"
+                });
+                loc_28_marker.setMap(map); 
 
 
 
-
-                var roll_LineCoord=[con_start, loc_2, loc_3, loc_4, loc_5, loc_6, loc_8, loc_9, loc_10, loc_11, loc_12, loc_13, loc_14, loc_15, loc_16, loc_17, loc_18, loc_19, loc_20, loc_21, loc_22, loc_23];
+                var roll_LineCoord=[con_start, loc_2, loc_3, loc_4, loc_5, loc_6, loc_8, loc_9, loc_10, loc_11, loc_12, loc_13, loc_14, loc_15, loc_16, loc_17, loc_18, loc_19, loc_20, loc_21, loc_22, loc_23, loc_24, loc_25, loc_26, loc_27, loc_28];
                 console.log(roll_LineCoord);
                 var original_parcel_line = new google.maps.Polyline({
                     path: roll_LineCoord,
