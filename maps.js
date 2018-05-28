@@ -345,17 +345,17 @@ $(document).ready(function() {
                 });
                 loc_28_marker.setMap(map); 
 
-                var loc_28_raw=geolib.computeDestinationPoint(loc_27, 1992.173, 268.75);
-                var loc_28={lat:loc_28_raw.latitude, lng:loc_28_raw.longitude};
-                var loc_28_marker = new google.maps.Marker({
-                    position: loc_28,
+                var loc_29_raw=geolib.computeDestinationPoint(loc_28, 1992.173, 268.75);
+                var loc_29={lat:loc_29_raw.latitude, lng:loc_29_raw.longitude};
+                var loc_29_marker = new google.maps.Marker({
+                    position: loc_29,
                     title: "With Gilbert's south line S 88 3/4 W 6536 feet"
                 });
-                loc_28_marker.setMap(map); 
+                loc_29_marker.setMap(map); 
 
 
 
-                var roll_LineCoord=[con_start, loc_2, loc_3, loc_4, loc_5, loc_6, loc_8, loc_9, loc_10, loc_11, loc_12, loc_13, loc_14, loc_15, loc_16, loc_17, loc_18, loc_19, loc_20, loc_21, loc_22, loc_23, loc_24, loc_25, loc_26, loc_27, loc_28];
+                var roll_LineCoord=[con_start, loc_2, loc_3, loc_4, loc_5, loc_6, loc_8, loc_9, loc_10, loc_11, loc_12, loc_13, loc_14, loc_15, loc_16, loc_17, loc_18, loc_19, loc_20, loc_21, loc_22, loc_23, loc_24, loc_25, loc_26, loc_27, loc_28, loc_29];
                 console.log(roll_LineCoord);
                 var original_parcel_line = new google.maps.Polyline({
                     path: roll_LineCoord,
