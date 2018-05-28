@@ -115,6 +115,13 @@ $(document).ready(function() {
             draw: function(){
                 var nw_point_AWilliams_885={lat:32.714343,lng:-98.083526};
                 var nw_point_AWilliams_886={lat:32.693530,lng:-98.099981};
+
+                var nw_point_AWilliams_886_marker=new google.maps.Marker({
+                    position: nw_point_AWilliams_886,
+                    title: "Estimated NW point of Willams, A 886 survey from which start of tract 1 is measured"
+                });
+                nw_point_AWilliams_886_marker.setMap(map);
+
                 var startpoint=geolib.computeDestinationPoint(nw_point_AWilliams_886, 1330.147, 180);
                 var con_start={lat:startpoint.latitude,lng:startpoint.longitude};
                 var start_loc = new google.maps.Marker({
@@ -369,6 +376,52 @@ $(document).ready(function() {
             }
         }
         original_parcel.draw();
+
+        var original_parcel_track2={
+            draw: function(){
+                var se_point_GGreen_207={lat:32.642269,lng:-98.100800};
+                var se_point_GGreen_207_marker=new google.maps.Marker({
+                    position: se_point_GGreen_207,
+                    title: "Estimated SE point of Green, G 207 survey from which start of tract 2 is measured"
+                });
+                se_point_GGreen_207_marker.setMap(map);
+
+                var loca_2_raw=geolib.computeDestinationPoint(se_point_GGreen_207, 1401.2361357999830034, 0);
+                var loca_2={lat:loca_2_raw.latitude, lng:loca_2_raw.longitude};
+                var loca_2_marker = new google.maps.Marker({
+                    position: loca_2,
+                    title: "North 1450 vrs to corner a stake from which a P.O. brs S. 39 seconds E 5 1/2 vrs. passing said corner and at 1655 vrs to corner"
+                });
+                //1450 vrs is 1227.6691219999854638 meters
+                //1655 vrs is 1401.2361357999830034 meters
+                loca_2_marker.setMap(map); 
+
+                var loca_3_raw=geolib.computeDestinationPoint(loca_2, 660.40132079999204961, 270);
+                var loca_3={lat:loca_3_raw.latitude, lng:loca_3_raw.longitude};
+                var loca_3_marker = new google.maps.Marker({
+                    position: loca_3,
+                    title: "West 780 vrs to corner on the Brazos River"
+                });
+                //1450 vrs is 1227.6691219999854638 meters
+                //1655 vrs is 1401.2361357999830034 meters
+                loca_3_marker.setMap(map); 
+
+
+
+                var track2_LineCoord=[se_point_GGreen_207, loca_2, loca_3];
+                console.log(track2_LineCoord);
+                var original_parcel_line_track_2 = new google.maps.Polyline({
+                    path: track2_LineCoord,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: .7,
+                    strokeWeight: 1
+                  });
+                  original_parcel_line_track_2.setMap(map);
+
+            }
+        }
+        original_parcel_track2.draw();
 
 
     });
